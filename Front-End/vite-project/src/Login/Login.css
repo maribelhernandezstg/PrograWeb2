@@ -1,0 +1,158 @@
+.login{
+  
+    background: linear-gradient(45deg, #eee3ee, #e0e0e0); 
+    font-family: 'Kanit', sans-serif;
+  }
+  .cardlogin {
+    max-width: 60%;
+    margin:  auto !important;
+    margin-top: 1rem !important;
+    margin-bottom: 2rem !important;
+    text-align: center;
+    display: flex;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  } 
+  
+  .logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+  .logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+  
+  @keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+      animation: logo-spin infinite 20s linear;
+    }
+  }
+  
+  .card {
+    padding: 2em;
+  }
+  
+  .read-the-docs {
+    color: #888;
+  }
+  
+  .loginForm{
+  
+    background-color: #ececec;
+    width: 400px;
+    height: 600px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 12%;
+  }
+  
+  .loginImage{
+    background: linear-gradient(135deg, #efb8f2, #32a59f);
+    background-color: #efb8f2;
+    width: 400px;
+    height: 600px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  .text-align{
+    margin-top: 50%;
+    margin-bottom: 50%;
+  }
+  .image-align{
+    margin-top: 10%; margin-bottom: 40%;
+  }
+  
+  input{
+    background-color: transparent;
+    border-left: transparent;
+    border-top: transparent;
+    border-right: transparent;
+  
+    height: 50px;
+    color: black;
+    width: 100%;
+    margin-top: 20px;
+    border-image: linear-gradient(45deg, #efb8f2, #32a59f) 1;
+    border-width: 3px;
+  }
+  
+  input:focus{
+    outline: none;
+  }
+  
+  .inputs{
+    margin-top: 15%;
+    margin-bottom: 20%;
+  }
+  
+  h2{
+    color: rgb(24, 24, 24);
+    margin-top: 20%;
+    text-align: left;
+  }
+  
+  button{
+    margin-top: 200px;
+    width: 60%;
+  }
+  
+  p{
+    color: black;
+    font-size: 12px;
+  }
+  
+  img{
+    width: 50%;
+    float: left;
+    margin-top: 30px;
+  }
+  
+  h1{
+    padding-top: 200px;
+    padding-bottom: 0px;
+  }
+  h3{
+    margin-left: 50px;
+    margin-top: 0px;
+    padding-top: 0px;
+  }
+  
+  .msgError{
+    color: red;
+    position: absolute;
+    animation: fade-in 0.5s forwards;
+  }
+  
+  @keyframes fade-in {
+  
+    0% { transform: rotate(0deg); opacity: 0;}
+    25% { transform: rotate(5deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); opacity: 100;}
+  }
+  
+  
+  .margin-login-register{
+    margin-top: 1rem;
+  }

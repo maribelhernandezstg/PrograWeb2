@@ -1,0 +1,172 @@
+/* body {
+  background-color: #12c782; /* Cambia el color a tu preferencia 
+} */
+
+.cardPerfil {
+    max-width: 60%;
+    margin:  auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  } 
+  
+  .input-profile{
+    background-color: transparent;
+    border-left: transparent;
+    border-top: transparent;
+    border-right: transparent;
+  
+    height: 50px;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    margin-top: 20px;
+    border-image: linear-gradient(45deg, #efb8f2, #32a59f) 1;
+    border-width: 3px;
+  }
+  
+  
+  .card {
+    /* background-color: #313131; */
+    color: #c99da2;
+    border-radius: 20px;
+  }
+  
+  
+  
+  p, h1, h2, h3, h4, h5, h6, img {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .card {
+    width: 100%;
+    align-items: center;
+    /* background-color: #5e4955; */
+  
+  }
+  .profile-picture{
+    display: flex; /* Utiliza el modelo de caja flexible para centrar elementos */
+    justify-content: center; /* Centra horizontalmente los elementos dentro del contenedor */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+  }
+  
+  .button-profile{
+    align-items: center;
+    background-color: #5e4955 !important;
+    border-color: #5e4955 !important;
+  }
+  
+  .button-profile:hover{
+    color: #fff;
+    align-items: center;
+    background-color: #32a59f !important;
+    border-color: #32a59f !important;
+  }
+  
+  
+  .file-input{
+    display: block;
+    width: 100%;
+  }
+  
+  input[type=file] {
+    font-size: 0.85rem !important;
+    color: var(--bdm-primaryExtraL);
+    align-items: center;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 5px;
+   
+  }
+  
+  input[type=file]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: var(--bdm-primaryExtraL);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+  }
+  
+  input[type=file]::file-selector-button:hover {
+    background: var(--bdm-primaryLight);
+  }
+  
+      /* radio */
+      .radio-buttons-container {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+      }
+      
+      .radio-button {
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+      }
+      
+      .radio-button__input {
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      
+      .radio-button__label {
+        display: inline-block;
+        padding-left: 30px;
+        margin-bottom: 10px;
+        position: relative;
+        font-size: 16px;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+      }
+      
+      .radio-button__custom {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid #555;
+        transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+      }
+      
+      .radio-button__input:checked + .radio-button__label .radio-button__custom {
+        transform: translateY(-50%) scale(0.9);
+        border: 5px solid #4c8bf5;
+        color: #4c8bf5;
+      }
+      
+      .radio-button__input:checked + .radio-button__label {
+        color: #4c8bf5;
+      }
+      
+      .radio-button__label:hover .radio-button__custom {
+        transform: translateY(-50%) scale(1.2);
+        border-color: #4c8bf5;
+        box-shadow: 0 0 10px #4c8bf580;
+        
+      }
+      
+      /* imagen login & registro */
+      div.transboxLogin {
+        background-color: var(--bdm-important);
+        
+        opacity: 0.5;
+      }
+  
+      div.transboxRegister {
+        background-color: var(--bdm-primaryExtraL);
+        
+        opacity: 0.5;
+      }
