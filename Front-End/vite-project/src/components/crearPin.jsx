@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import { useState, useContext } from 'react';
+import { SessionContext } from "../context/sessionContext.jsx";
 import './crearTablero.css';
 
 function CrearPin() {
+  const {session} = useContext(SessionContext);
   const [titulo, setTitulo] = useState('');
   const [descripcion, setDescripcion] = useState('');
   const [imagen, setImagen] = useState(null); // Para manejar la imagen
@@ -9,12 +11,13 @@ function CrearPin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
+    formData.append('userId', session.id);
     formData.append('titulo', titulo);
     formData.append('descripcion', descripcion);
     formData.append('imagen', imagen);
 
     try {
-      const response = await fetch('http://localhost:5001/api/pines', {
+      const response = await fetch('http://localhost:5001/api/pin', {
         method: 'POST',
         body: formData,
       });
@@ -44,7 +47,6 @@ function CrearPin() {
         </div>
         <div className="form-group">
           <label htmlFor="imagen">Imagen:</label>
-          
           <input type="file" id="imagen" name="imagen" accept="image/*" onChange={(e) => setImagen(e.target.files[0])} />
 
         </div>

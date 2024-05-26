@@ -21,7 +21,7 @@ function App() {
         <Route path="/signup" element={<Register />} /> {/* Vista de registro */}
         <Route path="/profile" element={<Profile />} /> {/* Vista de perfil *+/}*/}
         <Route path="/pinterest" element={<Pagina />} /> {/* Vista de perfil *+/}*/}
-        <Route path="/inicio" element={<Inicio/>}/> {/* Vista de INICIO *+/}*/}
+        <Route path="/inicio" element={<Inicio />}/> {/* Vista de INICIO *+/}*/}
         <Route path="/perfilUser" element={<PerfilUser/>}/> {/* Vista de INICIO *+/}*/}
         <Route path="/crearTablero" element={<CrearTablero/>}/> {/* Vista de creacion de tableros *+/}*/}
         <Route path="/crearPin" element={<CrearPin/>}/> {/* Vista de creacion de publicaciones/pines *+/}*/}

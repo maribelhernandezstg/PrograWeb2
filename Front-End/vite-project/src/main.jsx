@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import {SessionProvider} from './context/sessionContext.jsx';
 import App from './App.jsx'
-import './index.css'
+import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <SessionProvider>
     <App />
-  </React.StrictMode>,
+  </SessionProvider>
 )

@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
+import { SessionContext } from '../context/sessionContext.jsx';
 import logo from '../assets/log2.png';
 import './Login.css';
 
 export function Register() {
+  const {saveSession} = useContext(SessionContext);
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     lastName: '',
@@ -36,6 +39,8 @@ export function Register() {
       if (response.ok) {
         // Registro exitoso, redirigir o mostrar un mensaje
         console.log('Registro exitoso');
+        saveSession(data);
+        navigate('/inicio');
       } else {
         // Manejar error del servidor
         console.error('Error al registrar');

@@ -1,9 +1,12 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { SessionContext } from '../context/sessionContext';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import logo from '../assets/log2.png';
-import { Link as RouterLink } from 'react-router-dom';
 import './Login.css';
 
-export function Login({ setUser }) {
+export function Login() {
+  const { saveSession } = useContext(SessionContext);
+  const navigate = useNavigate();
   const [nombre, setNombre] = useState('');
   const [contra, setContra] = useState('');
   const [error, setError] = useState(false);
@@ -23,13 +26,17 @@ export function Login({ setUser }) {
     };
     setError(false);
     try {
+      console.log('vamos a intentar enviar la peticion al back');
       const response = await fetch('http://localhost:5001/api/login', config); // Ajusta la URL del endpoint
       if (!response.ok) {
         setError(true);
         return;
       }
+      console.log('se hizo la peticion al back: ', response);
       const data = await response.json();
-      setUser(data.username);
+      console.log(data);
+      saveSession(data);
+      navigate('/inicio');
     } catch (error) {
       console.error('Error al iniciar sesión:', error);
       setError(true);
