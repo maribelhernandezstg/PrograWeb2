@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from '../assets/flicker.png';
+import logo from '../assets/log2.png';
 import { Link as RouterLink } from 'react-router-dom';
 import './Login.css';
 
@@ -10,8 +10,8 @@ export function Login({ setUser }) {
 
   async function loginUser() {
     const payload = {
-      user: nombre,
-      pass: contra,
+      username: nombre, // Cambia 'user' a 'username' para que coincida con el backend
+      password: contra,
     };
 
     const config = {
@@ -22,25 +22,29 @@ export function Login({ setUser }) {
       body: JSON.stringify(payload),
     };
     setError(false);
-    const response = await fetch('http://localhost:5000/login', config);
-    if (response.status === 401) {
+    try {
+      const response = await fetch('http://localhost:5001/api/login', config); // Ajusta la URL del endpoint
+      if (!response.ok) {
+        setError(true);
+        return;
+      }
+      const data = await response.json();
+      setUser(data.username);
+    } catch (error) {
+      console.error('Error al iniciar sesión:', error);
       setError(true);
-    } else {
-      alert('chi che pudo');
-      setError(false);
-      setUser([nombre]);
-      return;
     }
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    loginUser();
   };
 
   return (
     <div className="cardlogin">
       <div className="loginImage ">
-        <img className="image-align" src={logo} alt="" />
+        <img className="logo image-align" src={logo} alt="" />
         <br />
         <div className="text-align">
           <h1 className="">Bienvenido</h1>
@@ -68,13 +72,10 @@ export function Login({ setUser }) {
           {error && <p className="msgError">Verifique usuario y/o contraseña</p>}
         </div>
         <br />
-        <RouterLink to="/pinterest">
-          <button onClick={loginUser}>Continuar</button>
-        </RouterLink>
+        <button type="submit">Continuar</button> {/* Cambia el botón a type="submit" */}
         <br />
         <RouterLink to="/signup">¿Aún no tienes una cuenta?</RouterLink>
       </form>
     </div>
   );
 }
-

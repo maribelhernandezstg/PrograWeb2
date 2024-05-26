@@ -5,7 +5,7 @@ function NavBar({ toggle }) {
 	return (
 		<>
 			<Nav>
-				<NavLink to='/'>FLICKER</NavLink>
+				<NavLink to='/'>PICFINITY</NavLink>
 				<NavIcon onClick={toggle}>
 				
 					<Bars />

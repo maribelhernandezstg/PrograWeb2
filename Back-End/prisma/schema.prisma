@@ -15,15 +15,61 @@ model User {
   lastName  String
   email     String   @unique
   active    Boolean  @default(true)
-  avatar    String
   createdAt DateTime @default(now())
   posts     Post[]
+  comments  Comment[]
+  likes     Like[]
+  savedPosts savedPosts[]
 }
 
+model Post {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  titulo     String
+  descripcion     String
+  img       String
+  active    Boolean  @default(true)
+  author    User     @relation(fields: [authorId], references: [id])
+  authorId  Int
+  comments  Comment[]
+  likes     Like[]
+  savedPosts savedPosts[]
+  postSearches PostSearch[]
+}
 
+model savedPosts {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  postId    Int
+  link      String
+  user      User     @relation(fields: [userId], references: [id])
+  post      Post     @relation(fields: [postId], references: [id])
+}
 
+model Comment {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  content   String
+  author    User     @relation(fields: [authorId], references: [id])
+  authorId  Int
+  post      Post     @relation(fields: [postId], references: [id])
+  postId    Int
+}
 
+model Like {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+  userId    Int
+  post      Post     @relation(fields: [postId], references: [id])
+  postId    Int
+}
 
-
+model PostSearch {
+  id        Int      @id @default(autoincrement())
+  postId    Int
+  terms     String
+  post      Post     @relation(fields: [postId], references: [id])
+}
 
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import logo from '../assets/flicker.png';
+import logo from '../assets/log2.png';
 import './Login.css';
 
 export function Register() {
@@ -32,7 +32,7 @@ export function Register() {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/register', config);
+      const response = await fetch('http://localhost:5001/api/register', config);
       if (response.ok) {
         // Registro exitoso, redirigir o mostrar un mensaje
         console.log('Registro exitoso');
@@ -49,7 +49,7 @@ export function Register() {
   return (
     <div className="cardlogin">
       <div className="loginImage">
-        <img className="image-align" src={logo} alt="" />
+        <img className="logo image-align" src={logo} alt="" />
         <br />
         <div className="text-align">
           <h1 className="">Bienvenido</h1>

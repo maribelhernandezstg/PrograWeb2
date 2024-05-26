@@ -1,0 +1,53 @@
+/* Estilos para el componente Inicio */
+
+.inicio {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    width: 100%;
+  }
+  
+  .logo {
+    flex: 1; /* Para que el logo ocupe todo el espacio disponible */
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Empuja el buscador hacia la derecha */
+  }
+  
+  
+  .search-bar input[type="text"] {
+    margin-right: 10px;
+    padding: 8px; /* Ajusta el espaciado interior */
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+    margin-right: 10px; /* Añade un pequeño espacio entre los elementos */
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .contenido {
+    margin-top: 60px; /* Ajusta el margen superior para evitar que el contenido se superponga con la barra de navegación */
+  }
+  

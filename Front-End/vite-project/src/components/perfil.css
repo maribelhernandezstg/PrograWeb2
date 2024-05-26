@@ -1,0 +1,95 @@
+/* Estilos para el componente Inicio */
+
+.inicio {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    width: 100%;
+  }
+  
+  .logo {
+    flex: 1; /* Para que el logo ocupe todo el espacio disponible */
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Empuja el buscador hacia la derecha */
+  }
+  
+  
+  .search-bar input[type="text"] {
+    margin-right: 10px;
+    padding: 8px; /* Ajusta el espaciado interior */
+  }
+  
+  .nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    display: inline-block;
+    margin-right: 10px; /* Añade un pequeño espacio entre los elementos */
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .contenido {
+    margin-top: 60px; /* Ajusta el margen superior para evitar que el contenido se superponga con la barra de navegación */
+  }
+
+  /* Estilos para el componente Perfil */
+
+.perfil-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .perfil-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .foto-perfil {
+    width: 150px; /* Tamaño deseado para la imagen de perfil */
+    height: 150px;
+    border-radius: 50%; /* Para hacer la imagen redondeada */
+    overflow: hidden; /* Para ocultar cualquier parte de la imagen que se extienda más allá del radio del borde */
+    margin-bottom: 20px; /* Espacio entre la imagen y el nombre de usuario */
+  }
+  
+  .foto-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para asegurarse de que la imagen se ajuste correctamente dentro del contenedor */
+  }
+  
+  .nombre-usuario {
+    text-align: center;
+  }
+  
+  .botones {
+    margin-top: 20px; /* Espacio entre el nombre de usuario y los botones */
+  }
+  
+  .crear-tablero,
+  .crear-pin {
+    /* Estilos para los botones */
+  }
+  
+  

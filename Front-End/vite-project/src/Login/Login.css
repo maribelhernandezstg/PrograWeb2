@@ -16,7 +16,8 @@
   } 
   
   .logo {
-    height: 6em;
+    height: auto !important;
+   width: 100%;
     padding: 1.5em;
     will-change: filter;
     transition: filter 300ms;
@@ -64,10 +65,10 @@
   }
   
   .loginImage{
-    background: linear-gradient(135deg, #efb8f2, #32a59f);
-    background-color: #efb8f2;
+    /*background: l6inear-gradient(135deg, #efb8f2, #32a59f);*/
+    background-color: #000501;
     width: 400px;
-    height: 600px;
+    height: 673px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     padding-left: 50px;
@@ -92,7 +93,8 @@
     color: black;
     width: 100%;
     margin-top: 20px;
-    border-image: linear-gradient(45deg, #efb8f2, #32a59f) 1;
+    border-image: linear-gradient(45deg, #ADE1E5, #ADE1E5) 1;
+   
     border-width: 3px;
   }
   
@@ -112,8 +114,8 @@
   }
   
   button{
-    margin-top: 200px;
-    width: 60%;
+    margin-top: 10px;
+    width: 80%;
   }
   
   p{
@@ -122,7 +124,7 @@
   }
   
   img{
-    width: 50%;
+    width: 60%;
     float: left;
     margin-top: 30px;
   }
