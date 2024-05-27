@@ -7,6 +7,8 @@ import Inicio from './components/inicio'
 import PerfilUser from './components/perfilUser'
 import CrearTablero from './components/crearTablero'
 import CrearPin from './components/crearPin'
+import InfoPerfil from './components/infoPerfil'
+import Favoritos from './components/favoritos'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 import './App.css'
@@ -25,6 +27,8 @@ function App() {
         <Route path="/perfilUser" element={<PerfilUser/>}/> {/* Vista de INICIO *+/}*/}
         <Route path="/crearTablero" element={<CrearTablero/>}/> {/* Vista de creacion de tableros *+/}*/}
         <Route path="/crearPin" element={<CrearPin/>}/> {/* Vista de creacion de publicaciones/pines *+/}*/}
+        <Route path="/infoPerfil" element={<InfoPerfil/>}/> {/* Vista de creacion de publicaciones/pines *+/}*/}
+        <Route path="/favoritos" element={<Favoritos/>}/> {/* Vista de creacion de publicaciones/pines *+/}*/}
         {/* Agrega más rutas según las necesidades de tu aplicación */}
       </Routes>
     </Router>

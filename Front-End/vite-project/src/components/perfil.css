@@ -87,9 +87,49 @@
     margin-top: 20px; /* Espacio entre el nombre de usuario y los botones */
   }
   
-  .crear-tablero,
-  .crear-pin {
-    /* Estilos para los botones */
-  }
+  /* perfil.css */
+.perfil-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-around; /* Esto distribuirá los botones de manera uniforme en el contenedor */
+  margin-top: 20px; /* Ajusta el margen según sea necesario */
+}
+
+/* Estilos para los botones */
+.crear-tablero,
+.crear-pin {
+  padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+  font-size: 16px; /* Ajusta el tamaño de fuente según sea necesario */
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Cambia el color de fondo según sea necesario */
+  color: white; /* Cambia el color del texto según sea necesario */
+  cursor: pointer;
+}
+
+/* Estilos para los botones al pasar el mouse */
+.crear-tablero:hover,
+.crear-pin:hover {
+  background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+}
+
+/* perfil.css */
+.botones {
+  display: flex;
+  justify-content: space-around; /* Esto distribuirá los botones de manera uniforme en el contenedor */
+  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+
+/* Añade margen horizontal entre los botones */
+.crear-tablero {
+  margin-right: 10px; /* Ajusta el margen derecho según sea necesario */
+}
+
   
+
   

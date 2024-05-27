@@ -1,3 +1,4 @@
+//schemas prisma
 generator client {
   provider = "prisma-client-js"
 }
@@ -8,33 +9,43 @@ datasource db {
 }
 
 model User {
-  id        Int      @id @default(autoincrement())
-  username  String   @unique
+  id        Int         @id @default(autoincrement())
+  username  String      @unique
   password  String
   name      String
   lastName  String
-  email     String   @unique
-  active    Boolean  @default(true)
-  createdAt DateTime @default(now())
+  email     String      @unique
+  active    Boolean     @default(true)
+  createdAt DateTime    @default(now())
   posts     Post[]
   comments  Comment[]
   likes     Like[]
   savedPosts savedPosts[]
+  tableros  Tableros[]
 }
 
 model Post {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  titulo     String
-  descripcion     String
-  img       String
-  active    Boolean  @default(true)
-  author    User     @relation(fields: [authorId], references: [id])
-  authorId  Int
-  comments  Comment[]
-  likes     Like[]
-  savedPosts savedPosts[]
+  id          Int         @id @default(autoincrement())
+  createdAt   DateTime    @default(now())
+  titulo      String
+  descripcion String
+  img         String
+  active      Boolean     @default(true)
+  author      User        @relation(fields: [authorId], references: [id])
+  authorId    Int
+  comments    Comment[]
+  likes       Like[]
+  savedPosts  savedPosts[]
   postSearches PostSearch[]
+}
+
+model Tableros {
+  id          Int         @id @default(autoincrement())
+  createdAt   DateTime    @default(now())
+  titulo      String
+  descripcion String
+  author      User        @relation(fields: [authorId], references: [id])
+  authorId    Int
 }
 
 model savedPosts {
@@ -73,3 +84,39 @@ model PostSearch {
 }
 
 
+model tableros1{
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  titulo    String
+  descripcion String
+  publicacion publicaciones[]
+}
+
+model publicaciones{
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  titulo    String
+  descripcion String
+  img       String
+  favoritos Favoritos[]
+   tablero tableros1[]
+  Busqueda busqueda[]
+}
+
+model comentarios{
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  contenido String
+}
+
+model Favoritos {
+  id           Int         @id @default(autoincrement())
+  createdAt    DateTime    @default(now())
+  publicacion  publicaciones[]   // Relación con las publicaciones favoritas
+}
+
+model busqueda{
+  id           Int         @id @default(autoincrement())
+  createdAt    DateTime    @default(now())
+   publicacion  publicaciones[]  
+}

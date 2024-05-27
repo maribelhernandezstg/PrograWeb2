@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import { SessionContext } from '../context/sessionContext.jsx';
 import logo from '../assets/log2.png';
