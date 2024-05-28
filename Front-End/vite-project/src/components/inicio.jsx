@@ -81,16 +81,16 @@ function Inicio() {
           <button type="submit">Buscar</button>
         </div>
         <ul className="nav-links">
-          <li><a href="/">Inicio</a></li>
+          <li><a href="/inicio">Inicio</a></li>
           <li><a href="/favoritos">Favoritos</a></li>
-          <li><a href="/perfil">Perfil</a></li>
+          <li><a href="/perfilUser">Perfil</a></li>
         </ul>
       </nav>
       <div className="contenido">
         {/* Renderizar los pines */}
         {pines.map(pin => (
           <div key={pin.id} className="pin">
-            <img src={`http://localhost:5001/${pin.img}`} alt={pin.titulo} />
+            <img src={pin.img} alt={pin.titulo} />
             <h2>{pin.titulo}</h2>
             <p>{pin.descripcion}</p>
             {/* Botón Favorito */}

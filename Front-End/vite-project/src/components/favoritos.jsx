@@ -31,7 +31,7 @@ function Favoritos() {
         {/* Renderizar los pines favoritos */}
         {favoritos.map(pin => (
           <div key={pin.id} className="pin">
-            <img src={`http://localhost:5001/${pin.img}`} alt={pin.titulo} />
+            <img src={pin.img} alt={pin.titulo} />
             <h2>{pin.titulo}</h2>
             <p>{pin.descripcion}</p>
           </div>

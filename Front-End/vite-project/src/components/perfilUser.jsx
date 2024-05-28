@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './perfil.css'; // Importa el archivo CSS para los estilos
+import { Link } from 'react-router-dom';
+import { SessionContext } from '../context/sessionContext.jsx';
 
 function Perfil() {
+  const { session } = useContext(SessionContext);
   return (
     <div className="perfil-container">
       <nav className="navbar">
@@ -13,9 +16,9 @@ function Perfil() {
           <button type="submit">Buscar</button>
         </div>
         <ul className="nav-links">
-          <li><a href="/">Inicio</a></li>
+          <li><a href="/inicio">Inicio</a></li>
           <li><a href="/favoritos">Favoritos</a></li>
-          <li><a href="/perfil">Perfil</a></li>
+          <li><a href="/perfilUser">Perfil</a></li>
         </ul>
       </nav>
       <div className="perfil-content">
@@ -23,11 +26,16 @@ function Perfil() {
           <img src="./src/assets/perfil.jpg" alt="Foto de perfil" />
         </div>
         <div className="nombre-usuario">
-          <h2>Nombre de Usuario</h2>
+          <h2>@</h2><h2>{session.username}</h2>
         </div>
+        <Link to="/infoPerfil">
+          <button className="crear-tablero">Informacion del Perfil</button>
+        </Link>
         <div className="botones">
-          <button className="crear-tablero">Crear Tablero</button>
-          <button className="crear-pin">Crear Pin</button>
+         {/* Redirigir a la página para crear un tablero */}
+         <Link to="/crearTablero"><button className="crear-tablero">Crear Tablero</button></Link>
+          {/* Redirigir a la página para crear un pin */}
+          <Link to="/crearPin"><button className="crear-pin">Crear Pin</button></Link>
         </div>
       </div>
     </div>

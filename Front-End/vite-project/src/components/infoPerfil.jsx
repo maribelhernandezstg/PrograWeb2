@@ -15,9 +15,9 @@ function Perfil() {
           <button type="submit">Buscar</button>
         </div>
         <ul className="nav-links">
-          <li><a href="/">Inicio</a></li>
+          <li><a href="/inicio">Inicio</a></li>
           <li><a href="/favoritos">Favoritos</a></li>
-          <li><a href="/perfil">Perfil</a></li>
+          <li><a href="/perfilUser">Perfil</a></li>
         </ul>
       </nav>
       <div className="perfil-content">
